@@ -53,6 +53,9 @@ struct allFilteredCountries: View {
     //All Countries Continents
     var allContinents = ["None","Africa","Australia","Asia","Central America","Europe","North America","South America"]
     
+    //Country Search Variable
+    @State private var searchCountry = ""
+    
     @State private var selectedContinent = 0
     
     
@@ -111,6 +114,7 @@ struct allFilteredCountries: View {
                             
                         }.frame(width: 100, height: 50)
                          .font(.system(size: 15))
+              
                          
                             
                     
@@ -119,11 +123,26 @@ struct allFilteredCountries: View {
                     
                 Spacer()
             
+        
+            Section(header: Text("Search for Country").bold().foregroundColor(Color.blue)) {
+                
+                TextField("🔍",text: $searchCountry)
+                    .foregroundColor(Color.red)
+                    .font(.system(size: 15))
+                    .frame(height: 30)
+                    .border(Color.gray, width: 0.3)
+                    .cornerRadius(3)
+                    .padding()
+                
+                
+                
+            }
+            
          
             
-            Section(header: Text("Continent: \(allContinents[selectedContinent])").bold().foregroundColor(Color.purple)) {
+            Section(header: Text("Continent: \(allContinents[selectedContinent])").bold().foregroundColor(Color.blue)) {
         
-                        List(allCountryData.dataStructure.filter {$0.ContinentName == processSelectedContinet},id: \.id) { country in
+                List(allCountryData.dataStructure.filter {$0.ContinentName == processSelectedContinet || $0.CountryName.contains(self.searchCountry)} ,id: \.id) { country in
                             
                                     
                                 
@@ -153,3 +172,5 @@ struct allFilteredCountries: View {
         .navigationBarTitle(Text("Countries of the world"),displayMode: .inline)
     }
 }
+
+
