@@ -463,8 +463,8 @@
        "id": 47,
        "CountryName": "Czech Republic",
        "CapitalName": "Prague",
-       "CapitalLatitude": 50.08333333,
-       "CapitalLongitude": 14.466667,
+       "CapitalLatitude": 55.6761,
+       "CapitalLongitude": 12.5683,
        "CountryCode": "CZ",
        "ContinentName": "Europe",
        "ImageName": "Czech-republic"
@@ -1813,8 +1813,8 @@
        "id": 182,
        "CountryName": "United Kingdom",
        "CapitalName": "London",
-       "CapitalLatitude": 51.5,
-       "CapitalLongitude": -0.083333,
+       "CapitalLatitude": 51.5074,
+       "CapitalLongitude": -0.1278,
        "CountryCode": "GB",
        "ContinentName": "Europe",
        "ImageName": "United-kingdom"
@@ -1823,8 +1823,8 @@
        "id": 183,
        "CountryName": "United States",
        "CapitalName": "Washington",
-       "CapitalLatitude": -77,
-       "CapitalLongitude": 38.883333,
+       "CapitalLatitude": 38.9072,
+       "CapitalLongitude": -77.0369,
        "CountryCode": "DC",
        "ContinentName": "North America",
        "ImageName": "United-states-of-america"

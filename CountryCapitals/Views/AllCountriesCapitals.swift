@@ -10,6 +10,7 @@
 import SwiftUI
 
 
+
 struct AllCountryCapitals: View {
     
   
@@ -17,9 +18,7 @@ struct AllCountryCapitals: View {
     var body: some View {
         
             
-                allFilteredCountries()
-                
-      
+        allFilteredCountries()
         
     }
 
@@ -49,6 +48,7 @@ struct allFilteredCountries: View {
     
     //JSON Data
     @ObservedObject var allCountryData = DataLoader()
+    @EnvironmentObject var mapCoordinates: CountryObservable
     
     //All Countries Continents
     var allContinents = ["None","Africa","Australia","Asia","Central America","Europe","North America","South America"]
@@ -57,7 +57,6 @@ struct allFilteredCountries: View {
     @State private var searchCountry = ""
     
     @State private var selectedContinent = 0
-    
     
     //variable to return continet
     var processSelectedContinet: String {
@@ -102,7 +101,7 @@ struct allFilteredCountries: View {
     var body: some View {
         
         
-        VStack {
+        VStack(alignment: .leading) {
         
             Picker(selection: $selectedContinent, label: Text("Select").foregroundColor(Color.blue)) {
                         
@@ -114,33 +113,26 @@ struct allFilteredCountries: View {
                             
                         }.frame(width: 100, height: 50)
                          .font(.system(size: 15))
-              
-                         
-                            
-                    
+            
                         
-                    }.padding()
+                    }
                     
                 Spacer()
             
         
-            Section(header: Text("Search for Country").bold().foregroundColor(Color.blue)) {
+            Section(header: Text("Search for Country").bold().foregroundColor(Color.blue).font(.system(size: 15))) {
                 
-                TextField("🔍",text: $searchCountry)
+                TextField("🔍Search",text: $searchCountry)
                     .foregroundColor(Color.red)
                     .font(.system(size: 15))
                     .frame(height: 30)
                     .border(Color.gray, width: 0.3)
                     .cornerRadius(3)
-                    .padding()
-                
-                
+                    
                 
             }
             
-         
-            
-            Section(header: Text("Continent: \(allContinents[selectedContinent])").bold().foregroundColor(Color.blue)) {
+            Section(header: Text("Country Details").bold().foregroundColor(Color.blue).font(.system(size: 15))) {
         
                 List(allCountryData.dataStructure.filter {$0.ContinentName == processSelectedContinet || $0.CountryName.contains(self.searchCountry)} ,id: \.id) { country in
                             
@@ -151,14 +143,39 @@ struct allFilteredCountries: View {
                                         HStack {
                                                     Text("\(country.CountryName)")
                                                         .font(.system(size: 15))
-                                                        .frame(width: geometry.size.width / 3, height: 20)
+                                                        .frame(width: geometry.size.width / 4, height: 20)
                                                     Text("\(country.CapitalName)")
                                                         .font(.system(size: 15))
-                                                        .frame(width: geometry.size.width / 3, height: 20)
+                                                        .frame(width: geometry.size.width / 4, height: 20)
                                                     Image("\(country.ImageName)")
                                                         .resizable()
                                                         .scaledToFill()
                                                         .frame(width: 40, height: 20)
+                                           
+                                            
+                                            //Get map of country and capital location
+                                            Button(action: {
+                                                
+                                                //Assign Capital cordinates to the global variables
+                                                self.mapCoordinates.CapitalLatitude = country.CapitalLatitude
+                                                self.mapCoordinates.CapitalLongitude = country.CapitalLongitude
+                                                self.mapCoordinates.CapitalName = country.CapitalName
+                                                
+                                            }) {
+                                                
+                                                Text("Map")
+                                                    .font(.system(size: 15))
+                                                    .foregroundColor(Color.blue)
+                                        
+                                                
+                                            }
+                                            //Navigation link
+                                            NavigationLink(destination: MapView()) {
+                                                
+                                                EmptyView()
+                                                
+                                            }
+                                            
                                         
                                                     Spacer()
                                             
@@ -170,7 +187,10 @@ struct allFilteredCountries: View {
         }
         
         .navigationBarTitle(Text("Countries of the world"),displayMode: .inline)
+    .padding()
     }
 }
+
+
 
 
