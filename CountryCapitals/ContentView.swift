@@ -11,7 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var rotation = 0.0
-    @State var tapLoggo = false
+    @State var opacity = 1.0
+  
     
     var body: some View {
         
@@ -19,62 +20,59 @@ struct ContentView: View {
             
             ZStack {
                 
-                Color.black
+                Color(red: 0.2, green: 0.5, blue: 0.7)
                     .edgesIgnoringSafeArea(.all)
                 
                 ZStack {
                     
                     VStack {
                         
-                        Image("FlagsTitle")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width:300, height:30)
-                        Spacer()
+                        
+                       
+                        
+                        Text("Country Flag")
+                            .foregroundColor(Color.white)
+                            .font(.custom("Didot", size: 45)).bold()
+                            .shadow(radius: 2)
+                            
+            
+                  
+                        Spacer().frame(height:120)
+                        
+                        Rectangle()
+                            .frame(width:300, height: 5)
+                            .foregroundColor(Color.white)
                     
-                    
-                    HStack {
                         
                     
                         
-                          Image("FlagLogo")
+                        Image("flagsV2")
+                        
                             .resizable()
                             .scaledToFill()
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.white,lineWidth: 3))
                             .frame(width: 80, height:270)
+                            //Animation
                             .rotationEffect(.degrees(rotation))
                             .animation(Animation.easeOut(duration:  3).delay(1))
                                 .onAppear() {
                                 self.rotation += 360
-                                }
-                          
+                        }
+                  
                         
-                        
-                                        
-                    }.padding()
+                        Rectangle()
+                        .frame(width:300, height: 5)
+                        .foregroundColor(Color.white)
                     
                         Spacer()
                         
-                        HStack {
-                            
-                            
-                            NavigationLink(destination: AllCountryCapitals()) {
-                           IconTemplate(icons: "doc.text.magnifyingglass")
-                            .foregroundColor(Color.white)
-                            Spacer().frame(width:30)
-                            }
-                               
-                           IconTemplate(icons: "gamecontroller")
-                            .foregroundColor(Color.white)
-                            Spacer().frame(width:30)
-                           
-                           IconTemplate(icons: "rectangle.and.paperclip")
-                            .foregroundColor(Color.white)
-                            Spacer().frame(width:30)
-                            
+
+                           //Call Main Menu
+                           MenuView()
+                        
                                                
-                        }.padding()
-                     
-                
+                    
                     }
                     
                 }

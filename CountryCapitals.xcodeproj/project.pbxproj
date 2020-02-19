@@ -19,6 +19,7 @@
 		03552B8923F99D9700A83C6E /* AllCountriesCapitals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552B8823F99D9700A83C6E /* AllCountriesCapitals.swift */; };
 		03552B8B23FBE9BC00A83C6E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552B8A23FBE9BC00A83C6E /* MapView.swift */; };
 		03552B8D23FC196900A83C6E /* IconTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552B8C23FC196900A83C6E /* IconTemplate.swift */; };
+		03552B8F23FDCBC500A83C6E /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03552B8E23FDCBC500A83C6E /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		03552B8823F99D9700A83C6E /* AllCountriesCapitals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesCapitals.swift; sourceTree = "<group>"; };
 		03552B8A23FBE9BC00A83C6E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		03552B8C23FC196900A83C6E /* IconTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTemplate.swift; sourceTree = "<group>"; };
+		03552B8E23FDCBC500A83C6E /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				03552B8623F998B000A83C6E /* JSONDataLoader.swift */,
 				03552B8A23FBE9BC00A83C6E /* MapView.swift */,
 				03552B8C23FC196900A83C6E /* IconTemplate.swift */,
+				03552B8E23FDCBC500A83C6E /* Menu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				03552B6D23F9850600A83C6E /* AppDelegate.swift in Sources */,
 				03552B6F23F9850600A83C6E /* SceneDelegate.swift in Sources */,
 				03552B7123F9850600A83C6E /* ContentView.swift in Sources */,
+				03552B8F23FDCBC500A83C6E /* Menu.swift in Sources */,
 				03552B8723F998B000A83C6E /* JSONDataLoader.swift in Sources */,
 				03552B8923F99D9700A83C6E /* AllCountriesCapitals.swift in Sources */,
 			);
