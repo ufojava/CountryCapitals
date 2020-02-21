@@ -140,6 +140,25 @@ struct GameSubV1: View {
         
     }
     
+
+    //Function Calculator
+    func calculator() {
+        
+        if self.continentName.contains(self.guessTheContinent) {
+            self.score += 1
+        }
+        
+        if self.countryName.contains(self.guessTheCountry) {
+            self.score += 1
+        }
+        
+        if self.capitalName.contains(self.guessTheCapital) {
+        self.score += 2
+            
+        }
+        
+    }
+    
     
     var body: some View {
         
@@ -151,6 +170,7 @@ struct GameSubV1: View {
                 
                 withAnimation {
                 self.getNewFlag.toggle()
+                    
                 }
                 
                 self.flagImageName = self.getFlag
@@ -162,6 +182,15 @@ struct GameSubV1: View {
                
                 //Reset toggle and country variable
                 self.resetQuestionsToggle()
+                
+                
+                if self.getNewFlag {
+                    //Read Speach
+                    readSpeech(word: "Welcome to the flag game. Type in Continent, Country and Capital. Partial words are acceptable and finally click get score for test results.")
+                    
+                }
+                
+                
                
             }) {
                 
@@ -192,7 +221,7 @@ struct GameSubV1: View {
                 Form {
                 
                     //Guess the continet
-                    Section(header: Text("Country Flag Details").bold().font(.system(size: 15))) {
+                    Section(header: Text("Country Flag Details Test").bold().font(.system(size: 15))) {
                         
                         TextField("Guess the continent",text: $guessTheContinent)
                             .foregroundColor(Color.red)
@@ -204,16 +233,21 @@ struct GameSubV1: View {
                                 Text("Reveal the Continent")
                                     .foregroundColor(Color.red)
                                     .font(.system(size: 15))
-                            
+                                
+                                
+                                
                                 
                             }
                             
                             if showContinetToggle {
                                 
+                                
                                 Text("\(self.continentName)")
                                     .foregroundColor(Color.red)
                                     .font(.system(size: 15))
                                 
+                                    
+                              
                             }
                        
                         
@@ -265,12 +299,35 @@ struct GameSubV1: View {
                                     .font(.system(size: 15))
                                 
                             }
+                        
+                        
+                        
                     }//End of Section
+                    
+                    HStack {
+                        
+                        Button(action: {
+                            
+                            self.calculator()
+                            
+                            
+                            
+                        }) {
+                            
+                            Text("Get Score")
+                                .padding()
+                                .background(Color.purple)
+                                .foregroundColor(Color.white)
+                                .cornerRadius(6)
+                            
+                        }
+                        
                         
                         Text("Score:\(self.score)")
                         .foregroundColor(Color.purple)
                         .font(.system(size: 15))
                     
+                    }
                     
                 }.padding()
                 
