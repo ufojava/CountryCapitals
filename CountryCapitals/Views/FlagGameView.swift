@@ -78,7 +78,10 @@ struct GameSubV1: View {
     //Questions Fields
     @State private var guessTheContinent = ""
     @State private var guessTheCountry = ""
-    @State private var giessTheCapital = ""
+    @State private var guessTheCapital = ""
+    
+    
+    @State private var score = 0
     
     
     
@@ -122,7 +125,20 @@ struct GameSubV1: View {
          
      }
     
-    
+    //Function to reset toggle and questions
+    func resetQuestionsToggle() {
+        
+        //Reset the toggles
+        self.showContinetToggle = false
+        self.showCountryToggle = false
+        self.showCapitalToggle = false
+        
+        //Reset Questionss
+        self.guessTheContinent = ""
+        self.guessTheCountry = ""
+        self.guessTheCapital = ""
+        
+    }
     
     
     var body: some View {
@@ -143,8 +159,10 @@ struct GameSubV1: View {
                 //Get continet
                 self.continentName = self.processContinet(inCountry: self.countryName)
                 self.capitalName = self.processCapital(inCountry: self.countryName)
-                
-                
+               
+                //Reset toggle and country variable
+                self.resetQuestionsToggle()
+               
             }) {
                 
                 
@@ -166,35 +184,99 @@ struct GameSubV1: View {
                 .resizable()
                 .scaledToFill()
                 .border(Color.gray, width: 1)
-                .frame(width: 200, height: 120)
+                .frame(width: 150, height: 70)
                 .transition(.slide)
                 
-                Spacer().frame(height:40)
+                Spacer().frame(height:10)
                 
+                Form {
                 
-                TextField("Guess the Country",text:$guessTheCountry)
-                    .padding()
-                
-                
-                Toggle(isOn: $showCountryToggle) {
+                    //Guess the continet
+                    Section(header: Text("Country Flag Details").bold().font(.system(size: 15))) {
+                        
+                        TextField("Guess the continent",text: $guessTheContinent)
+                            .foregroundColor(Color.red)
+                            .font(.system(size: 15))
+                          
+                        
+                            Toggle(isOn: $showContinetToggle) {
+                                
+                                Text("Reveal the Continent")
+                                    .foregroundColor(Color.red)
+                                    .font(.system(size: 15))
+                            
+                                
+                            }
+                            
+                            if showContinetToggle {
+                                
+                                Text("\(self.continentName)")
+                                    .foregroundColor(Color.red)
+                                    .font(.system(size: 15))
+                                
+                            }
+                       
+                        
+                        //Guess the country
+                   
+                        
+                        TextField("Guess the Country",text:$guessTheCountry)
+                            .foregroundColor(Color.green)
+                            .font(.system(size: 15))
+                        
+                        
+                        Toggle(isOn: $showCountryToggle) {
+                            
+                            Text("Reveal the Country")
+                                .foregroundColor(Color.green)
+                                .font(.system(size: 15))
+                            
+                        }
+                        
+                        if showCountryToggle {
+                            
+                            Text("\(self.countryName)")
+                                .foregroundColor(Color.green)
+                                .font(.system(size: 15))
+                            
+                        }
+                 
+                   
                     
-                    Text("Reveal Country")
+                   //Guess the capital
+                   
+                        
+                        TextField("Guess the capital",text: $guessTheCapital)
+                            .font(.system(size: 15))
+                            .foregroundColor(Color.blue)
+                            
+                            
+                            Toggle(isOn: $showCapitalToggle) {
+                                
+                                Text("Revael the capital")
+                                    .foregroundColor(Color.blue)
+                                    .font(.system(size: 15))
+                            }
+                    
+                            if showCapitalToggle {
+                                
+                                Text("\(self.capitalName)")
+                                    .foregroundColor(Color.blue)
+                                    .font(.system(size: 15))
+                                
+                            }
+                    }//End of Section
+                        
+                        Text("Score:\(self.score)")
+                        .foregroundColor(Color.purple)
+                        .font(.system(size: 15))
+                    
                     
                 }.padding()
                 
-                if showCountryToggle {
-                    
-                    Text("\(self.countryName)")
-                }
                 
-               
-            
-                Text("\(self.continentName)")
-                Text("\(capitalName)")
                 
-                    
-                }
-            
+            }
         
         }//VStack End
         
