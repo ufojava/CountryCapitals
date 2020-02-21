@@ -29,8 +29,8 @@ struct MenuView: View {
             
             
             
-                HStack {
-                    Spacer().frame(width:50)
+                VStack {
+                    
                     
                     Button(action: {
                         
@@ -47,28 +47,44 @@ struct MenuView: View {
                         
                         
                     }//End of Button
-                Spacer().frame(width:10)
+                
                 
                 //Search Icon
                 if searchIconToggle {
                     
                     NavigationLink(destination: AllCountryCapitals()) {
+                        HStack {
+                    Text("Flag Search")
+                        .font(.custom("Didot", size: 20))
+                        .foregroundColor(Color.black)
+                    Spacer().frame(width:30)
                 
                     MenuIcon(icons: "doc.text.magnifyingglass")
                         .foregroundColor(Color.green)
+                            
+                        }
                 
                     }
                 }
-                Spacer().frame(width:30)
+               
                 
                 //Game Icon
                 
                 if gameIconToggle {
                     
+                    NavigationLink(destination: GamePlay()) {
+                        HStack {
+                    Text("Flag Game  ")
+                        .font(.custom("Didot", size: 20))
+                        .foregroundColor(Color.black)
+                    Spacer().frame(width:30)
+                    
                     MenuIcon(icons: "gamecontroller")
                         .foregroundColor(Color.red)
+                        }
+                    }
                 }
-                Spacer().frame(width:20)
+               
                 
                
                 
