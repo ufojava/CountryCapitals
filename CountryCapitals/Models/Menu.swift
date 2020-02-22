@@ -55,7 +55,7 @@ struct MenuView: View {
                     NavigationLink(destination: AllCountryCapitals()) {
                         HStack {
                     Text("Flag Search")
-                        .font(.custom("Didot", size: 20))
+                        .font(.system(size: 17))
                         .foregroundColor(Color.black)
                     Spacer().frame(width:30)
                 
@@ -75,9 +75,9 @@ struct MenuView: View {
                     NavigationLink(destination: GamePlay()) {
                         HStack {
                     Text("Flag Game  ")
-                        .font(.custom("Didot", size: 20))
+                        .font(.system(size: 17))
                         .foregroundColor(Color.black)
-                    Spacer().frame(width:30)
+                    Spacer().frame(width:27)
                     
                     MenuIcon(icons: "gamecontroller")
                         .foregroundColor(Color.red)

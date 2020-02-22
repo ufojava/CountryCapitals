@@ -50,13 +50,13 @@
     },
     {
         "id": 6,
-        "CountryName": "Antigua-and-barbuda",
+        "CountryName": "Antigua_and_barbuda",
         "CapitalName": "Saint John's",
         "CapitalLatitude": 17.11666667,
         "CapitalLongitude": -61.85,
         "CountryCode": "AG",
         "ContinentName": "North America",
-        "ImageName": "Antigua-and-barbuda"
+        "ImageName": "Antigua_and_barbuda"
     },
     {
         "id": 7,
@@ -181,7 +181,7 @@
     {
         "id": 19,
         "CountryName": "Benin",
-        "CapitalName": "Porto-Novo",
+        "CapitalName": "Porto_Novo",
         "CapitalLatitude": 6.483333333,
         "CapitalLongitude": 2.616667,
         "CountryCode": "BJ",
@@ -210,13 +210,13 @@
     },
     {
         "id": 22,
-        "CountryName": "Bosnia-and-herzegovina",
+        "CountryName": "Bosnia_and_herzegovina",
         "CapitalName": "Sarajevo",
         "CapitalLatitude": 43.86666667,
         "CapitalLongitude": 18.416667,
         "CountryCode": "BA",
         "ContinentName": "Europe",
-        "ImageName": "Bosnia-and-herzegovina"
+        "ImageName": "Bosnia_and_herzegovina"
     },
     {
         "id": 23,
@@ -260,13 +260,13 @@
     },
     {
         "id": 27,
-        "CountryName": "Burkina-faso",
+        "CountryName": "Burkina_faso",
         "CapitalName": "Ouagadougou",
         "CapitalLatitude": 12.36666667,
         "CapitalLongitude": -1.516667,
         "CountryCode": "BF",
         "ContinentName": "Africa",
-        "ImageName": "Burkina-faso"
+        "ImageName": "Burkina_faso"
     },
     {
         "id": 28,
@@ -320,23 +320,23 @@
     },
     {
         "id": 33,
-        "CountryName": "Cape-verde",
+        "CountryName": "Cape_verde",
         "CapitalName": "Praia",
         "CapitalLatitude": 14.91666667,
         "CapitalLongitude": -23.516667,
         "CountryCode": "CV",
         "ContinentName": "Africa",
-        "ImageName": "Cape-verde"
+        "ImageName": "Cape_verde"
     },
     {
         "id": 34,
-        "CountryName": "Central-african-republic",
+        "CountryName": "Central_african_republic",
         "CapitalName": "Bangui",
         "CapitalLatitude": 4.366666667,
         "CapitalLongitude": 18.583333,
         "CountryCode": "CF",
         "ContinentName": "Africa",
-        "ImageName": "Central-african-republic"
+        "ImageName": "Central_african_republic"
     },
     {
         "id": 35,
@@ -390,43 +390,43 @@
     },
     {
         "id": 40,
-        "CountryName": "Congo-democratic-republic",
+        "CountryName": "Congo_democratic_republic",
         "CapitalName": "Kinshasa",
         "CapitalLatitude": -4.316666667,
         "CapitalLongitude": 15.3,
         "CountryCode": "CD",
         "ContinentName": "Africa",
-        "ImageName": "Congo-democratic-republic"
+        "ImageName": "Congo_democratic_republic"
     },
     {
         "id": 41,
-        "CountryName": "Congo-republic",
+        "CountryName": "Congo_republic",
         "CapitalName": "Brazzaville",
         "CapitalLatitude": -4.25,
         "CapitalLongitude": 15.283333,
         "CountryCode": "CG",
         "ContinentName": "Africa",
-        "ImageName": "Congo-republic"
+        "ImageName": "Congo_republic"
     },
     {
         "id": 42,
-        "CountryName": "Costa-rica",
+        "CountryName": "Costa_rica",
         "CapitalName": "San Jose",
         "CapitalLatitude": 9.933333333,
         "CapitalLongitude": -84.083333,
         "CountryCode": "CR",
         "ContinentName": "Central America",
-        "ImageName": "Costa-rica"
+        "ImageName": "Costa_rica"
     },
     {
         "id": 43,
-        "CountryName": "Cote-d-ivoire",
+        "CountryName": "Cote_d_ivoire",
         "CapitalName": "Yamoussoukro",
         "CapitalLatitude": 6.816666667,
         "CapitalLongitude": -5.266667,
         "CountryCode": "CI",
         "ContinentName": "Africa",
-        "ImageName": "Cote-d-ivoire"
+        "ImageName": "Cote_d_ivoire"
     },
     {
         "id": 44,
@@ -460,13 +460,13 @@
     },
     {
         "id": 47,
-        "CountryName": "Czech-republic",
+        "CountryName": "Czech_republic",
         "CapitalName": "Prague",
         "CapitalLatitude": 55.6761,
         "CapitalLongitude": 12.5683,
         "CountryCode": "CZ",
         "ContinentName": "Europe",
-        "ImageName": "Czech-republic"
+        "ImageName": "Czech_republic"
     },
     {
         "id": 48,
@@ -520,23 +520,23 @@
     },
     {
         "id": 53,
-        "CountryName": "El-salvador",
+        "CountryName": "El_salvador",
         "CapitalName": "San Salvador",
         "CapitalLatitude": 13.7,
-        "CapitalLongitude": -89.2,
+        "CapitalLongitude": 89.2,
         "CountryCode": "SV",
         "ContinentName": "Central America",
-        "ImageName": "El-salvador"
+        "ImageName": "El_salvador"
     },
     {
         "id": 54,
-        "CountryName": "Equatorial-guinea",
+        "CountryName": "Equatorial_guinea",
         "CapitalName": "Malabo",
         "CapitalLatitude": 3.75,
         "CapitalLongitude": 8.783333,
         "CountryCode": "GQ",
         "ContinentName": "Africa",
-        "ImageName": "Equatorial-guinea"
+        "ImageName": "Equatorial_guinea"
     },
     {
         "id": 55,
@@ -690,13 +690,13 @@
     },
     {
         "id": 70,
-        "CountryName": "Guinea-bissau",
+        "CountryName": "Guinea_bissau",
         "CapitalName": "Bissau",
         "CapitalLatitude": 11.85,
         "CapitalLongitude": -15.583333,
         "CountryCode": "GW",
         "ContinentName": "Africa",
-        "ImageName": "Guinea-bissau"
+        "ImageName": "Guinea_bissau"
     },
     {
         "id": 71,
@@ -711,7 +711,7 @@
     {
         "id": 72,
         "CountryName": "Haiti",
-        "CapitalName": "Port-au-Prince",
+        "CapitalName": "Port_au_Prince",
         "CapitalLatitude": 18.53333333,
         "CapitalLongitude": -72.333333,
         "CountryCode": "HT",
@@ -720,13 +720,13 @@
     },
     {
         "id": 73,
-        "CountryName": "Vatican-city",
+        "CountryName": "Vatican_city",
         "CapitalName": "Vatican City",
         "CapitalLatitude": 41.9,
         "CapitalLongitude": 12.45,
         "CountryCode": "VA",
         "ContinentName": "Europe",
-        "ImageName": "Vatican-city"
+        "ImageName": "Vatican_city"
     },
     {
         "id": 74,
@@ -880,23 +880,23 @@
     },
     {
         "id": 89,
-        "CountryName": "North-korea",
+        "CountryName": "North_korea",
         "CapitalName": "Pyongyang",
         "CapitalLatitude": 39.01666667,
         "CapitalLongitude": 125.75,
         "CountryCode": "KP",
         "ContinentName": "Asia",
-        "ImageName": "North-korea"
+        "ImageName": "North_korea"
     },
     {
         "id": 90,
-        "CountryName": "South-korea",
+        "CountryName": "South_korea",
         "CapitalName": "Seoul",
         "CapitalLatitude": 37.55,
         "CapitalLongitude": 126.983333,
         "CountryCode": "KR",
         "ContinentName": "Asia",
-        "ImageName": "South-korea"
+        "ImageName": "South_korea"
     },
     {
         "id": 91,
@@ -1210,13 +1210,13 @@
     },
     {
         "id": 122,
-        "CountryName": "New-zealand",
+        "CountryName": "New_zealand",
         "CapitalName": "Wellington",
         "CapitalLatitude": -41.3,
         "CapitalLongitude": 174.783333,
         "CountryCode": "NZ",
         "ContinentName": "Australia",
-        "ImageName": "New-zealand"
+        "ImageName": "New_zealand"
     },
     {
         "id": 123,
@@ -1310,13 +1310,13 @@
     },
     {
         "id": 132,
-        "CountryName": "Papua-new-guinea",
+        "CountryName": "Papua_new_guinea",
         "CapitalName": "Port Moresby",
         "CapitalLatitude": -9.45,
         "CapitalLongitude": 147.183333,
         "CountryCode": "PG",
         "ContinentName": "Australia",
-        "ImageName": "Papua-new-guinea"
+        "ImageName": "Papua_new_guinea"
     },
     {
         "id": 133,
@@ -1410,33 +1410,33 @@
     },
     {
         "id": 142,
-        "CountryName": "Saint-kitts-and-nevis",
+        "CountryName": "Saint_kitts_and_nevis",
         "CapitalName": "Basseterre",
         "CapitalLatitude": 17.3,
         "CapitalLongitude": -62.716667,
         "CountryCode": "KN",
         "ContinentName": "North America",
-        "ImageName": "Saint-kitts-and-nevis"
+        "ImageName": "Saint_kitts_and_nevis"
     },
     {
         "id": 143,
-        "CountryName": "Saint-lucia",
+        "CountryName": "Saint_lucia",
         "CapitalName": "Castries",
         "CapitalLatitude": 14,
         "CapitalLongitude": -61,
         "CountryCode": "LC",
         "ContinentName": "North America",
-        "ImageName": "Saint-lucia"
+        "ImageName": "Saint_lucia"
     },
     {
         "id": 144,
-        "CountryName": "Saint-vincent-and-the-grenadines",
+        "CountryName": "Saint_vincent_and_the_grenadines",
         "CapitalName": "Kingstown",
         "CapitalLatitude": 13.13333333,
         "CapitalLongitude": -61.216667,
         "CountryCode": "VC",
         "ContinentName": "Central America",
-        "ImageName": "Saint-vincent-and-the-grenadines"
+        "ImageName": "Saint_vincent_and_the_grenadines"
     },
     {
         "id": 145,
@@ -1450,33 +1450,33 @@
     },
     {
         "id": 146,
-        "CountryName": "San-marino",
+        "CountryName": "San_marino",
         "CapitalName": "San Marino",
         "CapitalLatitude": 43.93333333,
         "CapitalLongitude": 12.416667,
         "CountryCode": "SM",
         "ContinentName": "Europe",
-        "ImageName": "San-marino"
+        "ImageName": "San_marino"
     },
     {
         "id": 147,
-        "CountryName": "Sao-tome-and-principe",
+        "CountryName": "Sao_tome_and_principe",
         "CapitalName": "Sao Tome",
         "CapitalLatitude": 0.333333333,
         "CapitalLongitude": 6.733333,
         "CountryCode": "ST",
         "ContinentName": "Africa",
-        "ImageName": "Sao-tome-and-principe"
+        "ImageName": "Sao_tome_and_principe"
     },
     {
         "id": 148,
-        "CountryName": "Saudi-arabia",
+        "CountryName": "Saudi_arabia",
         "CapitalName": "Riyadh",
         "CapitalLatitude": 24.65,
         "CapitalLongitude": 46.7,
         "CountryCode": "SA",
         "ContinentName": "Asia",
-        "ImageName": "Saudi-arabia"
+        "ImageName": "Saudi_arabia"
     },
     {
         "id": 149,
@@ -1510,13 +1510,13 @@
     },
     {
         "id": 152,
-        "CountryName": "Sierra-leone",
+        "CountryName": "Sierra_leone",
         "CapitalName": "Freetown",
         "CapitalLatitude": 8.483333333,
         "CapitalLongitude": -13.233333,
         "CountryCode": "SL",
         "ContinentName": "Africa",
-        "ImageName": "Sierra-leone"
+        "ImageName": "Sierra_leone"
     },
     {
         "id": 153,
@@ -1550,13 +1550,13 @@
     },
     {
         "id": 156,
-        "CountryName": "Solomon-islands",
+        "CountryName": "Solomon_islands",
         "CapitalName": "Honiara",
         "CapitalLatitude": -9.433333333,
         "CapitalLongitude": 159.95,
         "CountryCode": "SB",
         "ContinentName": "Australia",
-        "ImageName": "Solomon-islands"
+        "ImageName": "Solomon_islands"
     },
     {
         "id": 157,
@@ -1570,23 +1570,23 @@
     },
     {
         "id": 158,
-        "CountryName": "South-africa",
+        "CountryName": "South_africa",
         "CapitalName": "Pretoria",
         "CapitalLatitude": -25.7,
         "CapitalLongitude": 28.216667,
         "CountryCode": "ZA",
         "ContinentName": "Africa",
-        "ImageName": "South-africa"
+        "ImageName": "South_africa"
     },
     {
         "id": 159,
-        "CountryName": "South-sudan",
+        "CountryName": "South_sudan",
         "CapitalName": "Juba",
         "CapitalLatitude": 4.85,
         "CapitalLongitude": 31.616667,
         "CountryCode": "SS",
         "ContinentName": "Africa",
-        "ImageName": "South-sudan"
+        "ImageName": "South_sudan"
     },
     {
         "id": 160,
@@ -1600,13 +1600,13 @@
     },
     {
         "id": 161,
-        "CountryName": "Sri-lanka",
+        "CountryName": "Sri_lanka",
         "CapitalName": "Colombo",
         "CapitalLatitude": 6.916666667,
         "CapitalLongitude": 79.833333,
         "CountryCode": "LK",
         "ContinentName": "Asia",
-        "ImageName": "Sri-lanka"
+        "ImageName": "Sri_lanka"
     },
     {
         "id": 162,
@@ -1730,13 +1730,13 @@
     },
     {
         "id": 174,
-        "CountryName": "Trinidad-and-tobago",
+        "CountryName": "Trinidad_and_tobago",
         "CapitalName": "Port of Spain",
         "CapitalLatitude": 10.65,
         "CapitalLongitude": -61.516667,
         "CountryCode": "TT",
         "ContinentName": "North America",
-        "ImageName": "Trinidad-and-tobago"
+        "ImageName": "Trinidad_and_tobago"
     },
     {
         "id": 175,
@@ -1800,33 +1800,33 @@
     },
     {
         "id": 181,
-        "CountryName": "United-arab-emirates",
+        "CountryName": "United_arab_emirates",
         "CapitalName": "Abu Dhabi",
         "CapitalLatitude": 24.46666667,
         "CapitalLongitude": 54.366667,
         "CountryCode": "AE",
         "ContinentName": "Asia",
-        "ImageName": "United-arab-emirates"
+        "ImageName": "United_arab_emirates"
     },
     {
         "id": 182,
-        "CountryName": "United-kingdom",
+        "CountryName": "United_kingdom",
         "CapitalName": "London",
         "CapitalLatitude": 51.5074,
         "CapitalLongitude": -0.1278,
         "CountryCode": "GB",
         "ContinentName": "Europe",
-        "ImageName": "United-kingdom"
+        "ImageName": "United_kingdom"
     },
     {
         "id": 183,
-        "CountryName": "United-states",
+        "CountryName": "United_states",
         "CapitalName": "Washington",
         "CapitalLatitude": 38.9072,
         "CapitalLongitude": -77.0369,
         "CountryCode": "DC",
         "ContinentName": "North America",
-        "ImageName": "United-states"
+        "ImageName": "United_states"
     },
     {
         "id": 184,

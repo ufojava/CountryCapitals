@@ -82,6 +82,7 @@ struct GameSubV1: View {
     
     
     @State private var score = 0
+    @State private var totalGameScore = 0
     
     
     
@@ -144,18 +145,21 @@ struct GameSubV1: View {
     //Function Calculator
     func calculator() {
         
-        if self.continentName.contains(self.guessTheContinent) {
+        if self.continentName.contains(self.guessTheContinent) || (self.guessTheContinent.range(of: self.continentName, options: .caseInsensitive) != nil) {
             self.score += 1
         }
         
-        if self.countryName.contains(self.guessTheCountry) {
+        if self.countryName.contains(self.guessTheCountry) || (self.guessTheCountry.range(of: self.countryName,options: .caseInsensitive) != nil) {
             self.score += 1
         }
         
-        if self.capitalName.contains(self.guessTheCapital) {
+        if self.capitalName.contains(self.guessTheCapital) || (self.guessTheCapital.range(of: self.capitalName,options: .caseInsensitive) != nil){
         self.score += 2
             
         }
+        
+        //Calculate total score
+        self.totalGameScore += self.score
         
     }
     
@@ -186,7 +190,7 @@ struct GameSubV1: View {
                 
                 if self.getNewFlag {
                     //Read Speach
-                    readSpeech(word: "Welcome to the flag game. Type in Continent, Country and Capital. Partial words are acceptable and finally click get score for test results.")
+                    readSpeech(word: "Welcome to the flag game. Test your knowledge")
                     
                 }
                 
@@ -213,7 +217,7 @@ struct GameSubV1: View {
                 .resizable()
                 .scaledToFill()
                 .border(Color.gray, width: 1)
-                .frame(width: 150, height: 70)
+                .frame(width: 140, height: 70)
                 .transition(.slide)
                 
                 Spacer().frame(height:10)
@@ -221,18 +225,18 @@ struct GameSubV1: View {
                 Form {
                 
                     //Guess the continet
-                    Section(header: Text("Country Flag Details Test").bold().font(.system(size: 15))) {
+                    Section(header: Text("Country Flag Details Test").bold().font(.system(size: 14))) {
                         
                         TextField("Guess the continent",text: $guessTheContinent)
                             .foregroundColor(Color.red)
-                            .font(.system(size: 15))
+                            .font(.system(size: 14))
                           
                         
                             Toggle(isOn: $showContinetToggle) {
                                 
                                 Text("Reveal the Continent")
                                     .foregroundColor(Color.red)
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 14))
                                 
                                 
                                 
@@ -244,7 +248,7 @@ struct GameSubV1: View {
                                 
                                 Text("\(self.continentName)")
                                     .foregroundColor(Color.red)
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 14))
                                 
                                     
                               
@@ -256,14 +260,14 @@ struct GameSubV1: View {
                         
                         TextField("Guess the Country",text:$guessTheCountry)
                             .foregroundColor(Color.green)
-                            .font(.system(size: 15))
+                            .font(.system(size: 14))
                         
                         
                         Toggle(isOn: $showCountryToggle) {
                             
                             Text("Reveal the Country")
                                 .foregroundColor(Color.green)
-                                .font(.system(size: 15))
+                                .font(.system(size: 14))
                             
                         }
                         
@@ -271,7 +275,7 @@ struct GameSubV1: View {
                             
                             Text("\(self.countryName)")
                                 .foregroundColor(Color.green)
-                                .font(.system(size: 15))
+                                .font(.system(size: 14))
                             
                         }
                  
@@ -281,7 +285,7 @@ struct GameSubV1: View {
                    
                         
                         TextField("Guess the capital",text: $guessTheCapital)
-                            .font(.system(size: 15))
+                            .font(.system(size: 14))
                             .foregroundColor(Color.blue)
                             
                             
@@ -289,14 +293,14 @@ struct GameSubV1: View {
                                 
                                 Text("Revael the capital")
                                     .foregroundColor(Color.blue)
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 14))
                             }
                     
                             if showCapitalToggle {
                                 
                                 Text("\(self.capitalName)")
                                     .foregroundColor(Color.blue)
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 14))
                                 
                             }
                         
@@ -308,25 +312,39 @@ struct GameSubV1: View {
                         
                         Button(action: {
                             
+                            self.score = 0
                             self.calculator()
                             
                             
                             
                         }) {
                             
-                            Text("Get Score")
+                            Text("Get")
                                 .padding()
+                                .frame(width:80, height: 30)
                                 .background(Color.purple)
                                 .foregroundColor(Color.white)
                                 .cornerRadius(6)
+                                .font(.system(size: 14))
                             
                         }
                         
                         
                         Text("Score:\(self.score)")
                         .foregroundColor(Color.purple)
-                        .font(.system(size: 15))
+                        .font(.system(size: 14))
+                        
+                        Text("Game Score: \(self.totalGameScore)")
+                            .foregroundColor(Color.green)
+                            .font(.system(size: 14))
                     
+                    }
+                    
+                    NavigationLink(destination: WebView(url: "https://en.wikipedia.org/wiki/\(self.countryName)")) {
+                        
+                        Text("Country Wiki")
+                            .font(.system(size: 14))
+                            .foregroundColor(Color.yellow)
                     }
                     
                 }.padding()
