@@ -19,6 +19,7 @@ struct GamePlay: View {
 
 
 
+
     
     var body: some View {
         
@@ -163,8 +164,12 @@ struct GameSubV1: View {
         
     }
     
+
+    
     
     var body: some View {
+        
+       
         
         VStack {
         
@@ -222,10 +227,15 @@ struct GameSubV1: View {
                 
                 Spacer().frame(height:10)
                 
+         
+                
                 Form {
                 
                     //Guess the continet
                     Section(header: Text("Country Flag Details Test").bold().font(.system(size: 14))) {
+                        
+                    
+                        HStack {//Continent
                         
                         TextField("Guess the continent",text: $guessTheContinent)
                             .foregroundColor(Color.red)
@@ -234,7 +244,7 @@ struct GameSubV1: View {
                         
                             Toggle(isOn: $showContinetToggle) {
                                 
-                                Text("Reveal the Continent")
+                                Text("Reveal Continent")
                                     .foregroundColor(Color.red)
                                     .font(.system(size: 14))
                                 
@@ -253,57 +263,59 @@ struct GameSubV1: View {
                                     
                               
                             }
-                       
+                        }//End HStack
                         
                         //Guess the country
                    
-                        
-                        TextField("Guess the Country",text:$guessTheCountry)
-                            .foregroundColor(Color.green)
-                            .font(.system(size: 14))
-                        
-                        
-                        Toggle(isOn: $showCountryToggle) {
-                            
-                            Text("Reveal the Country")
+                        HStack {
+                            TextField("Guess the Country",text:$guessTheCountry)
                                 .foregroundColor(Color.green)
                                 .font(.system(size: 14))
                             
-                        }
-                        
-                        if showCountryToggle {
                             
-                            Text("\(self.countryName)")
-                                .foregroundColor(Color.green)
-                                .font(.system(size: 14))
+                            Toggle(isOn: $showCountryToggle) {
+                                
+                                Text("Reveal Country")
+                                    .foregroundColor(Color.green)
+                                    .font(.system(size: 14))
+                                
+                                
+                          
+                            }
                             
-                        }
-                 
+                            if showCountryToggle {
+                                
+                                Text("\(self.countryName)")
+                                    .foregroundColor(Color.green)
+                                    .font(.system(size: 14))
+                                
+                            }
+                        }//End of Country HStack
                    
                     
                    //Guess the capital
                    
+                        HStack {
+                            TextField("Guess the capital",text: $guessTheCapital)
+                                .font(.system(size: 14))
+                                .foregroundColor(Color.blue)
+                                
+                                
+                                Toggle(isOn: $showCapitalToggle) {
+                                    
+                                    Text("Revael capital")
+                                        .foregroundColor(Color.blue)
+                                        .font(.system(size: 14))
+                                }
                         
-                        TextField("Guess the capital",text: $guessTheCapital)
-                            .font(.system(size: 14))
-                            .foregroundColor(Color.blue)
-                            
-                            
-                            Toggle(isOn: $showCapitalToggle) {
-                                
-                                Text("Revael the capital")
-                                    .foregroundColor(Color.blue)
-                                    .font(.system(size: 14))
-                            }
-                    
-                            if showCapitalToggle {
-                                
-                                Text("\(self.capitalName)")
-                                    .foregroundColor(Color.blue)
-                                    .font(.system(size: 14))
-                                
-                            }
-                        
+                                if showCapitalToggle {
+                                    
+                                    Text("\(self.capitalName)")
+                                        .foregroundColor(Color.blue)
+                                        .font(.system(size: 14))
+                                    
+                                }
+                        }//End of Capital HStack
                         
                         
                     }//End of Section
@@ -356,9 +368,11 @@ struct GameSubV1: View {
         }//VStack End
         
     
-        
+        }
     }
-}
+
+
+
 
 
 
